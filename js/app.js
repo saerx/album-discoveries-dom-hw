@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const albumForm = document.querySelector('#album-form');
     albumForm.addEventListener('submit', handleAlbumFormSubmit);
 
-    // const deleteAllButton = document.querySelector('#delete-all');
-    // deleteAllButton.addEventListener('click', handleDeleteAllClick);
-    
-    
+    const deleteAllButton = document.querySelector('.delete-all');
+    // if (!deleteAllButton === null) {
+        deleteAllButton.addEventListener('click', handleDeleteAllClick);
+    // }
 
 });
 
@@ -51,7 +51,7 @@ const createDeleteAllButton = function () {
     return deleteAllButton;
 }
 
-// const handleDeleteAllClick = function (event) {
-//     const readingList = document.querySelector('#reading-list');
-//     readingList.innerHTML = '';
-// }
+const handleDeleteAllClick = function (event) {
+    const albumList = document.querySelector('#album-list');
+    albumList.innerHTML = '';
+}
