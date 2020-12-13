@@ -39,6 +39,10 @@ const createAlbumListItem = function (form) {
     year.textContent = form.year.value;
     albumListItem.appendChild(year);
 
+    const howGood = document.createElement('p');
+    howGood.textContent = `"It's ${form.goodness.value}" - says user`;
+    albumListItem.appendChild(howGood);
+
     return albumListItem;
 }
 
