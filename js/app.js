@@ -3,9 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     albumForm.addEventListener('submit', handleAlbumFormSubmit);
 
     const deleteAllButton = document.querySelector('#delete-all');
-    // if (!deleteAllButton === null) {
         deleteAllButton.addEventListener('click', handleDeleteAllClick);
-    // }
+    
 
 });
 
@@ -18,6 +17,8 @@ const handleAlbumFormSubmit = function (event) {
 
     const deleteButton = document.querySelector('#delete-all');
     deleteButton.style.display = 'block'
+    // toggleDeleteVisbility;
+
 
     event.target.reset();
 }
@@ -46,4 +47,14 @@ const handleDeleteAllClick = function (event) {
     albumList.innerHTML = '';
     const deleteButton = document.querySelector('#delete-all');
     deleteButton.style.display = 'none'
+    // toggleDeleteVisbility;
 }
+
+// const toggleDeleteVisbility = function() {
+//     const deleteButton = document.querySelector('#delete-all');
+//     if (deleteButton.style.display === 'none') {
+//         deleteButton.style.display = 'block'
+//     } else if (deleteButton.style.display === 'block') {
+//         deleteButton.style.display = 'none'
+//     }    
+// }
